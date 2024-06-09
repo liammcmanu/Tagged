@@ -1,11 +1,10 @@
-# <img src="public/icons/icon_48.png" width="45" align="left"> Fastfind
+# <img src="public/icons/icon_48.png" width="45" align="left"> Tagged
 
-My Chrome Extension
+An easy way to search and organsise your files.
 
-## Features
+## Desc
 
-- Feature 1
-- Feature 2
+- AI Tagging allowing for easy searching of images and files.
 
 ## Install
 

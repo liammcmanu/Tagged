@@ -1,0 +1,51 @@
+{
+	"extends": [
+	  "airbnb-base",
+	  "eslint:recommended",
+	  "plugin:@typescript-eslint/eslint-recommended",
+	  "plugin:@typescript-eslint/recommended",
+	  "plugin:@typescript-eslint/recommended-requiring-type-checking",
+	  "plugin:@typescript-eslint/eslint-plugin-tslint/recommended"
+	],
+	"env": {
+	  "node": true,
+	  "es2020": true
+	},
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+	  "sourceType": "module",
+	  "project": "./tsconfig.eslint.json"
+	},
+	"plugins": [
+	  "@typescript-eslint"
+	],
+	"settings": {
+		"import/resolver": {
+		  "node": {
+			"extensions": [".js", ".jsx", ".ts", ".tsx"] // Add .ts and .tsx extensions
+		  }
+		}
+	},
+	"rules": {
+	  "@typescript-eslint/explicit-function-return-type": 2,
+	  "@typescript-eslint/explicit-module-boundary-types": 2,
+	  "@typescript-eslint/no-unsafe-assignment": 0,
+	  "@typescript-eslint/require-await": 2,
+	  "@typescript-eslint/no-unused-vars": 0,
+	  "import/no-extraneous-dependencies": 2,
+	  "import/no-unresolved": 2,
+	  "import/prefer-default-export": 2,
+	  "no-use-before-define": 2,
+	  "@typescript-eslint/no-unsafe-call": 0,
+	  "@typescript-eslint/no-unsafe-member-access": 0,
+	  "@typescript-eslint/no-explicit-any": 0,
+	  "no-console": 0,
+	  "import/extensions": [
+		"error",
+		"always",
+		{
+		  "ts": "never" // Require '.ts' extensions for TypeScript files
+		}
+	  ]
+	}
+  }

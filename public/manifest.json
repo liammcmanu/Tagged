@@ -1,9 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Fastfind",
-  "$schema": "https://json.schemastore.org/chrome-manifest.json",
+  "name": "Tagged",
   "version": "0.1.0",
-  "description": "My Chrome Extension",
+  "description": "Any easy way to search and organsise your files",
   "icons": {
     "16": "icons/icon_16.png",
     "32": "icons/icon_32.png",
@@ -13,12 +12,13 @@
   "background": {
     "service_worker": "background.js"
   },
-  "action": {
-    "default_title": "Fastfind",
-    "default_popup": "popup.html"
+  "side_panel": {
+    "default_path": "index.html"
   },
   "permissions": [
-    "storage"
+    "storage",
+	"sidePanel",
+	"identity"
   ],
   "content_scripts": [
     {
@@ -27,8 +27,13 @@
       ],
       "run_at": "document_idle",
       "js": [
-        "contentScript.js"
+        "sidepanel.js"
       ]
     }
-  ]
+  ],
+  "key": "MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC/zr5Z1g5oP0Q8t7mhdYFelzyuM3zKyE9eNzlyhkp81absrrwt4iyPua3ccBRTviRVc49+vDX588oc8AVZnN7vPLFGVB5zgYnoMK5EnCKBfQASXHTT0SajjfYm5kJ5JlpsHJJcRjrUhBScHAr+MjSHStnwU9hboJND5s02v3qK3tEObRgyc7SdnonwER3EtvfQh+uaTZOnaXQti0QUev/R2ZABnTTL1oUxPsAAKf8N3lweH4KTYDNm1X/7V0AQK4YkbPY3E8ocWMXloM138WnglujXFafrzFEAIOVPZrGvYyvtZ00wF69noOwWZPIubvmoaH4TI+KnCwFzQlgc9ZAzAgMBAAECggEACf9kvJoDtjtV+zQ4YMoXLC8F4q6cWpWGTYrjW6zURR19zehttpaLbBJplYviA1tt2WZknF6DEbw7VLbOEJW0qROoydmonKyr24ZuDvV0dvtk/ZAEJuZH9U54/h4SaO4u2GPE3Tpr5pfb2yc7C3TieArWwUgdhukfw/JL0Aa7BHHxoLPv5u8v/Y54gjR2LKIj3BFBXomYa7aCyT2z7koNb9IO1AcYCm3fizldNbvCD+VnGaTlIUuMIjOoVqVpzFe+2PxFRlxP0w/DIWajla4xnkMGBCa07tW1uljk9iiKOwd/Ddk0nc+9kGiQIcNGHad+bvm4cfIjU1VCLRSlbNIuQQKBgQDqUluHcq8rEajqdSqclKIi01WljdZoer1oFakTIYEHuQKwtE6r0Wcmz5y+6WTvRfmWT5i+ByYy+2hYhrKzLBiTHvxbKlkoA84iaFunYpBI4LTnAWOjSvY0lKXusk2JuhUAHaN1wheiGm6acyhyh3WHH2Qy4GsM32Xr6Wdmg6c3BQKBgQDRjXzWFF6yjxKLpRg8wlfxTSZ5n7pk7madMtNqNHn9WjnlcNW5bRoWWvhN5YkfscBGxwhbw+6nQhMItPYNqJrNy6axon43bRtC4KjlnCQHfDzQvCk+XhceNtMlcrgAuJ+NInsdDIywXOy7lJei9H48sSyBexJeqZ/gAUATqYXf1wKBgD+IDur9jELoKd1P4TrNDdzVYe5eM5jmVn5nCQ130w0t+22/pWjugMJEHiKhE03Qsigv8qDrPU8rXRJLix4LQap6B0AMjlnMFlK76sXKcoZf7oyHkuVOSMze1NKQI3fJLTJ31r7x3giElCJqQLg0xAfb2gX1VPELjQ3WncNsxKSlAoGAZ2znwlmHa6XFx3qSfdqFwSkM5lZ5jrtDli6xvedslijkDmQkeEJq78Gyb+/sP+JhPg2aCICp1497CX8XOiKPVSdAfMfwd7a4D8gGVF0+QxuEgJl92bRiwJzalc8LFgAJb4UnMm0xOxKCHQr31IvLinT/vGBb7rDVoZ+8Wnf/BT0CgYBZr2yJnHY0q/1xfQTDHhcEBf6API2HPhcPInJXlzeBSnKAfrfH6eKEBtYrriUX8BmLfvV/1kHWgLPn55m+s5lEFHMORTe9xxOOKlFyGfZO6JzuxkoXEMNS+nTkVjwFjENYoXKRAkTTZa7emc+f3ZAHDhAxIbeNcdlQHglv4HNXCw==",
+  "oauth2": {
+    "client_id": "364526010560-rtbqmp6qfnf81gqimntge44stfojn4k2.apps.googleusercontent.com",
+	"scopes": ["https://www.googleapis.com/auth/userinfo.email"]
+  }
 }

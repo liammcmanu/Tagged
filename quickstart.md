@@ -2,9 +2,9 @@
 
 ## What's in this directory
 * `config/`: Webpack configuration for this project.
-* `public/`: Popup files.
+* `public/`: sidepanel files.
     * `manifest.json`: Extension [configuration](https://developer.chrome.com/docs/extensions/mv2/manifest/).
-* `src/`: Source files for the popup, [background scripts](https://developer.chrome.com/docs/extensions/mv3/service_workers/#manifest), and [content scripts](https://developer.chrome.com/docs/extensions/mv3/content_scripts/).
+* `src/`: Source files for the sidepanel, [background scripts](https://developer.chrome.com/docs/extensions/mv3/service_workers/#manifest), and [content scripts](https://developer.chrome.com/docs/extensions/mv3/content_scripts/).
 * `.gitignore`: Lists files to be ignored in your Git repo.
 * `package.json`: Contains project configuration, scripts, and dependencies.
 

@@ -6,15 +6,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const PATHS = require('./paths');
 
-// To re-use webpack configuration across templates,
-// CLI maintains a common webpack configuration file - `webpack.common.js`.
-// Whenever user creates an extension, CLI adds `webpack.common.js` file
-// in template's `config` folder
 const common = {
   output: {
-    // the build folder to output bundles and assets in.
     path: PATHS.build,
-    // the filename template for entry chunks
     filename: '[name].js',
   },
   devtool: 'source-map',
@@ -25,12 +19,10 @@ const common = {
   },
   module: {
     rules: [
-      // Help webpack in understanding CSS files imported in .js files
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
-      // Check for images imported in .js files and
       {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
@@ -43,12 +35,19 @@ const common = {
           },
         ],
       },
+      // Add TypeScript support
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+	  },
     ],
   },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
   plugins: [
-    // Print file sizes
     new SizePlugin(),
-    // Copy static assets from `public` folder to `build` folder
     new CopyWebpackPlugin({
       patterns: [
         {
@@ -57,7 +56,6 @@ const common = {
         },
       ]
     }),
-    // Extract CSS into separate files
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),

@@ -1,0 +1,36 @@
+.button-txt {
+	margin-left: 10px;
+}
+
+.sign-in-btn {
+	margin-top: 20px;
+	width: 60vw;
+	max-width: 400px;
+}
+
+.sign-in-page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 90vh;
+}
+
+.login-with-google-txt {
+	text-align: center;
+	max-width: 45vw;
+	min-width: 40vw;
+}
+
+.title {
+	line-height: 10px;
+}
+
+.title-container {
+	text-align: center;
+	margin: 20px;
+}
+
+.logo {
+	font-size: 20vh;
+}
