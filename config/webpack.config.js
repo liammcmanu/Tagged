@@ -9,7 +9,6 @@ const PATHS = require('./paths');
 const config = merge(common, {
   entry: {
     sidepanel: PATHS.src + '/sidepanel.tsx',
-    contentScript: PATHS.src + '/contentScript.ts',
     background: PATHS.src + '/background.ts',
   },
 });

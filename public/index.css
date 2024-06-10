@@ -1,12 +1,22 @@
 html {
 	color: #3B3C36;
 	background-color: #FBFCFF;
-	font-family: "Google Sans",Roboto,Arial,sans-serif;
 }
 
 body {
 	margin: 0;
 	overflow-x: hidden;
+	font-family: "Lexend", sans-serif;
+}
+
+a {
+	color: #3B3C36;
+	text-decoration: none;
+}
+
+a:hover {
+	color: rgba(87, 88, 86, 0.885);
+	text-decoration: none;
 }
 
 .button-primary {
@@ -85,7 +95,6 @@ body {
   border-radius: 4px;
   color: #3c4043;
   cursor: pointer;
-  font-family: arial,sans-serif;
   font-size: 14px;
   height: 36px;
   line-height: 27px;
@@ -107,6 +116,33 @@ body {
 .button-secondary:focus {
   border-color: #4285f4;
   outline: none;
+}
+
+.button-icon {
+  border-style: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  padding: 2px;
+  line-height: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: pre;
+  font-size: 16px;
+  color: #3c4043;
+  background-color: #ffffff;
+}
+
+.button-icon:hover {
+  background-color: #77777730;
+}
+
+.button-icon:focus {
+  background-color: #a2a2a272;
 }
 
 .footer {
@@ -134,16 +170,11 @@ body {
 
 .footer-icons {
 	margin-right: 5px;
+	font-size: 15px;
+	vertical-align: middle;
 }
 
-a {
-	color: #3B3C36;
-	text-decoration: none;
+h2 {
+	font-weight: 600;
+	font-family: "Lexend", sans-serif;
 }
-
-a:hover {
-	color: rgba(87, 88, 86, 0.885);
-	text-decoration: none;
-}
-
-

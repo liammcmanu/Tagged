@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, useState } from 'react';
-import AuthService from '../service/authService'; // import AuthService
+import AuthService from '../service/authService';
 import {Home} from './home/home';
 import {Auth} from './auth/auth';
 import {LogService, LogType} from "../util/logger";
@@ -30,17 +30,19 @@ export const App: React.FC = () => {
         <>
 			<div>
 				<Suspense fallback={<Loader></Loader>}>
-					{isAuthenticated && <Auth />}
-					{!isAuthenticated && authToken && <Home token={authToken} />}
+					{!isAuthenticated && <Auth />}
+					{isAuthenticated && authToken && <Home token={authToken} />}
 				</Suspense>
 			</div>
 			<div className='footer'>
-				<a className='footer-content' target='_blank' href='https://www.instagram.com/liammcmanus__'>
-					<i className="fa-brands fa-instagram footer-icons"></i><span>liammcmanus__</span>
-				</a>
-				<a className='footer-content' target='_blank' href='https://github.com/liammcmanu'>
-					<i className="fa-brands fa-github footer-icons"></i><span>liammcmanu</span>
-				</a>
+				<div>
+					<a className='footer-content' target='_blank' href='https://www.instagram.com/liammcmanus__'>
+						<i className="fa-brands fa-instagram footer-icons"></i><span>liammcmanus__</span>
+					</a>
+					<a className='footer-content' target='_blank' href='https://github.com/liammcmanu'>
+						<i className="fa-brands fa-github footer-icons"></i><span>liammcmanu</span>
+					</a>
+				</div>
 			</div>
 		</>
     );

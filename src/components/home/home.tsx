@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import DriveService from '../../service/driveService';
 
+import './home.css';
+import SearchBar from '../search/search';
+
 interface HomeProps {
   token: string;
 }
@@ -18,10 +21,8 @@ export const Home: React.FC<HomeProps> = ({token}) => {
 	}, [token]);
   
 	return (
-	  <div>
-		{images.map((imageUrl, index) => (
-		  <img key={index} src={imageUrl} alt="From Google Drive" />
-		))}
-	  </div>
+	  <>
+		<SearchBar></SearchBar>
+	  </>
 	);
   }
