@@ -1,5 +1,3 @@
-### AuthService Class
-
 The `AuthService` class is responsible for handling authentication-related tasks. It contains the following methods:
 
 #### getAuthToken Method
@@ -25,4 +23,3 @@ To use the `AuthService` class, follow these steps:
 2. Call the desired method on the `AuthService` class to perform the authentication-related task.
 
 Please refer to the code and comments in the provided code snippet for more details on the implementation of each method.
-

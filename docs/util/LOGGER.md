@@ -1,5 +1,3 @@
-## logger.ts
-
 The `logger.ts` file contains the implementation of the `LogService` and `Namespace` classes, which are used for logging messages with optional variables.
 
 ### LogService Class
@@ -55,7 +53,7 @@ The constructor of the `Namespace` class takes a `namespace` parameter of type `
 #### log Method
 The `log` method in the `Namespace` class logs a message with an optional variable. It takes the same parameters as the `log` method in the `LogService` class.
 
-## loggingConfig.ts
+## The Logger...
 
 The `loggingConfig.ts` file is imported in the `logger.ts` file and contains the logging configuration. It exports an object that defines the logging files, their associated emojis, and other configuration options.
 
